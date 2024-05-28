@@ -3,7 +3,9 @@ name: backend
 on: 
   push: 
     branches: 
-       - main
+      - main
+  schedule: 
+      - cron: '0 3 * * *'
 
 defaults: 
   run: 
