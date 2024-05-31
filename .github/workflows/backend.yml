@@ -59,6 +59,6 @@ deploy:
           SERVER_USER: ${{ serects.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ serects.BACKEND_SERVER_IP }}
       - run: ssh ${SERVER_USER@${SERVER_IP} systemctl sutatus backend
-            env: 
+        env: 
           SERVER_USER: ${{ serects.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ serects.BACKEND_SERVER_IP }}
