@@ -53,13 +53,13 @@ jobs:
 
       - run: rsync -v -e dist/index.js ${SERVER_USER@${SERVER_IP}:~/index.js
         env: 
-          SERVER_USER: ${{ serects.BACKEND_SERVER_USER }}
-          SERVER_IP: ${{ serects.BACKEND_SERVER_IP }}
+          SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
+          SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
       - run: ssh ${SERVER_USER@${SERVER_IP} sudo systemctl restart backend
         env: 
-          SERVER_USER: ${{ serects.BACKEND_SERVER_USER }}
-          SERVER_IP: ${{ serects.BACKEND_SERVER_IP }}
+          SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
+          SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
       - run: ssh ${SERVER_USER@${SERVER_IP} systemctl sutatus backend
         env: 
-          SERVER_USER: ${{ serects.BACKEND_SERVER_USER }}
-          SERVER_IP: ${{ serects.BACKEND_SERVER_IP }}
+          SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
+          SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
