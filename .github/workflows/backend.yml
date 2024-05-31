@@ -64,7 +64,7 @@ jobs:
         env: 
           SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
-      - run: ssh ${SERVER_USER}@${SERVER_IP} systemctl sutatus backend
+      - run: ssh ${SERVER_USER}@${SERVER_IP} systemctl status backend
         env: 
           SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
