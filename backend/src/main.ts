@@ -6,7 +6,7 @@ import { sum } from './sum'
 
 const PORT = process.env.PORT ?? 8080
 // フロントエンドの URL を 'http://frontend.example.com' のように指定してください。
-const CORS_ORIGIN = undefined
+const CORS_ORIGIN = 'http://github-actions-s3-nemotos.s3-website-ap-southeast-2.amazonaws.com'
 
 const app = express()
 
