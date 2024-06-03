@@ -13,4 +13,5 @@ jobs:
   deploy: 
     runs-on: ubuntu-latest
     steps: 
+      - uses: actions/checkout@v4
       - run: aws s3 sync . s3://github-actions-s3-nemotos --exact-timestanps --region ap-southeast-2
