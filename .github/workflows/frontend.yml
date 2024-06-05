@@ -19,7 +19,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v4
 
-      - uses: aws-actions/configure-aws-credentials@v3
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::679513807641:role/github-actions-frontend-deployment-role
           aws-region: ap-southeast-2
